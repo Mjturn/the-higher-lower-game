@@ -10,5 +10,19 @@
         <header>
             {{ template "navbar.html" . }}
         </header>
+        <main>
+            <form id="login-form" method="POST" action="/login">
+                <h1>Login</h1>
+
+                <label for="username-input">Username:</label>
+                <input type="text" class="form-inputs" id="username-input" name="username-input" placeholder="Username" required>
+
+                <label for="password-input">Password:</label>
+                <input type="password" class="form-inputs" id="password-input" name="password-input" placeholder="Password" required>
+
+                <button type="submit" id="form-button">Log In</button>
+                <p>Not yet registered? <a class="form-links" href="/register">Create an account</a></p>
+            </form>
+        </main>
     </body>
 </html>
