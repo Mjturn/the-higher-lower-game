@@ -4,12 +4,23 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home</title>
-        <link rel="stylesheet" type="text/css" href="../static/styles.css">
+        <link rel="stylesheet" type="text/css" href="../static/styles/styles.css">
     </head>
     <body>
         <header>
             {{ template "navbar.html" . }}
             <h1 id="heading">The Higher Lower Game</h1>
         </header>
+        <main>
+            <h2 id="score">Score: </h2>
+            <div id="game-container">
+                <div class="dividers" id="random-number"></div>
+                <div class="dividers">
+                    <button class="higher-lower-buttons" id="higher-button">Higher</button>
+                    <button class="higher-lower-buttons" id="lower-button">Lower</button>
+                </div>
+            </div>
+        </main>
+        <script src="../static/logic/index.js"></script>
     </body>
 </html>

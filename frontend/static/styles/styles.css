@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+:root {
+    --orange: orangered;
+    
+    --red: rgb(255, 25, 0);
+    --green: rgb(25, 255, 0);
+    --blue: rgb(0, 100, 255);
+
+    --red-button-hover: rgb(175, 25, 0);
+    --green-button-hover: rgb(25, 175, 0);
+    --blue-button-hover: rgb(0, 100, 150);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+}
+
+#navbar {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-bottom: 5px;
+    height: 50px;
+    background-color: rgb(25, 25, 25);
+}
+
+#navbar-links-list {
+    display: flex;
+    list-style-type: none;
+}
+
+.navbar-links {
+    margin-inline: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-links:hover {
+    color: var(--orange);
+}
+
+#heading {
+    margin: 5px;
+    text-align: center;
+}
+
+#score {
+    text-align: center;
+}
+
+#game-container {
+    display: flex;
+}
+
+.dividers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100vh;
+}
+
+.dividers > * {
+    margin: 5px;
+}
+
+#random-number {
+    font-size: 50pt;
+}
+
+.higher-lower-buttons {
+    padding: 10px;
+    width: 75px;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 11pt;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#higher-button {
+    background-color: var(--red);
+}
+
+#higher-button:hover {
+    background-color: var(--red-button-hover);
+}
+
+#lower-button {
+    background-color: var(--green);
+}
+
+#lower-button:hover {
+    background-color: var(--green-button-hover);
+}
+
+#registration-form, #login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+#registration-form > *, #login-form > * {
+    margin: 2.5px;
+}
+
+.form-inputs {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+#form-button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100 px;
+    background-color: var(--blue);
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 11pt;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#form-button:hover {
+    background-color: var(--blue-button-hover);
+}
+
+.form-links {
+    color: white;
+    text-decoration: none;
+}
+
+.form-links:hover {
+    color: var(--red);
+}
