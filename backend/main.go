@@ -8,6 +8,8 @@ import (
     "database/sql"
     _ "github.com/go-sql-driver/mysql"
     "github.com/joho/godotenv"
+    "github.com/gin-contrib/sessions"
+    "github.com/gin-contrib/sessions/cookie"
     "github.com/Mjturn/the-higher-lower-game/backend/routes"
 )
 
@@ -39,7 +41,9 @@ func main() {
     router := gin.Default()
     router.Static("/static", "../frontend/static")
     router.LoadHTMLGlob("../frontend/templates/*.html")
-    routes.HandleRoutes(router)
+    store := cookie.NewStore([]byte(os.Getenv("SESSION_SECRET_KEY")))
+    router.Use(sessions.Sessions("user_session", store))
+    routes.HandleRoutes(router, database)
 
     err = router.Run(":8080")
     if err != nil {

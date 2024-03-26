@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 :root {
-    --orange: orangered;
-    
     --red: rgb(255, 25, 0);
     --green: rgb(25, 255, 0);
     --blue: rgb(0, 100, 255);
@@ -45,7 +43,7 @@ body {
 }
 
 .navbar-links:hover {
-    color: var(--orange);
+    color: orange;
 }
 
 #heading {
