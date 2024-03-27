@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ .requested_username }}</title>
+        <link rel="stylesheet" type="text/css" href="../static/styles/styles.css">
+    </head>
+    <body>
+        <header>
+            {{ template "navbar.html" . }}
+        </header>
+        <main>
+            <h1 id="profile-heading">{{ .requested_username }}</h1>
+        </main>
+    </body>
+</html>

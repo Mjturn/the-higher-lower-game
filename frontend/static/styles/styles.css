@@ -46,12 +46,25 @@ body {
     color: orange;
 }
 
+#logout-button {
+    margin-left: 5px;
+    margin-right: 10px;
+    width: 75px;
+    background-color: var(--blue);
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 #heading {
     margin: 5px;
     text-align: center;
 }
 
-#score {
+#score, #profile-heading {
     text-align: center;
 }
 

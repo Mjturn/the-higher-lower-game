@@ -2,6 +2,15 @@
     <ul id="navbar-links-list">
         <li><a class="navbar-links" href="/">Home</a></li>
         <li><a class="navbar-links" href="/register">Register</a></li>
-        <li><a class="navbar-links" href="/login">Log In</a></li>
+
+        {{ if .is_logged_in }}
+            <li><a class="navbar-links" href="/profile/{{ .username }}">Profile</a></li>
+
+            <form method="POST" action="/logout">
+                <li><button id="logout-button" type="submit" id="logout-button">Log Out</button></li>
+            </form>
+        {{ else }}
+            <li><a class="navbar-links" href="/login">Log In</a></li>
+        {{ end }}
     </ul>
 </nav>
